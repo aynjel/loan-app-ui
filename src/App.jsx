@@ -7,22 +7,32 @@ import MainNav from './components/MainNav'
 import PageNotFound from './pages/Error/PageNotFound'
 import Login from './pages/Auth/Login'
 import Employee from './pages/Employee'
+import Register from './pages/Auth/Register'
 
 function App() {
+
+  const user = undefined;
 
   return (
     <div className='container'>
       <main className='main'>
         <Router>
           <Header />
-          <MainNav />
+          {{
+            true: <MainNav />,
+            false: null
+          }[user]}
           <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path="/login" exact element={<Login />} />
+            <Route path="/register" exact element={<Register />} />
             <Route path="/employee" element={<Employee />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
-          <Footer />
+          {{
+            true: <Footer />,
+            false: null
+          }[user]}
         </Router>
       </main>
     </div>

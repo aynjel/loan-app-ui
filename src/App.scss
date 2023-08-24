@@ -97,6 +97,49 @@
       font-weight: 500;
       color: var(--lightslate);
     }
+
+    .home-btns{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+
+      .home-btn{
+        width: 150px;
+        height: 40px;
+        border: none;
+        outline: none;
+        background-color: var(--navyblue);
+        color: var(--white);
+        font-size: 16px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+
+        &:hover{
+          background-color: var(--white);
+          outline: 1px solid var(--navyblue);
+          color: var(--navyblue);
+        }
+      }
+
+      .home-btn:nth-child(2){
+        background-color: var(--white);
+        color: var(--navyblue);
+        border: 1px solid var(--navyblue);
+
+        &:hover{
+          background-color: var(--navyblue);
+          color: var(--white);
+          border: none;
+        }
+      }
+    }
   }
 }
 
@@ -164,14 +207,14 @@
 
 .login-section{
   width: 100%;
-  height: 600px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
   .login-container{
     width: 460px;
-    padding: 0 40px 20px;
+    padding: 10px 30px 30px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -201,10 +244,10 @@
 
         input{
           width: 100%;
-          height: 40px;
+          height: 20px;
           border: none;
           outline: none;
-          padding: 0 10px;
+          padding: 0 6px;
           font-size: 16px;
           font-weight: 500;
           color: var(--slate);
@@ -228,6 +271,20 @@
         &:hover{
           background-color: var(--ocean);
         }
+
+        &:disabled{
+          background-color: var(--lightslate);
+          cursor: not-allowed;
+        }
+      }
+
+      p{
+        background-color: var(--cornflower);
+        color: var(--navyblue);
+        font-size: 16px;
+        font-weight: 500;
+        padding: 10px;
+        text-align: left;
       }
     }
   }
