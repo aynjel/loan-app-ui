@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Link as ScrollLink } from 'react-scroll'
 
 function Header() {
   return (
@@ -12,16 +13,13 @@ function Header() {
             <Link to="/" className="header-nav-link">Home</Link>
           </li>
           <li className="header-nav-list-item">
-            <Link to="/about" className="header-nav-link">About</Link>
+            <ScrollLink className="header-nav-link" to="about" smooth={true} duration={500}>About</ScrollLink>
           </li>
           <li className="header-nav-list-item">
-            <Link to="/contact" className="header-nav-link">Contact</Link>
+            <ScrollLink className="header-nav-link" to="contact" smooth={true} duration={500}>Contact</ScrollLink>
           </li>
           <li className="header-nav-list-item">
             <Link to="/login" className="header-nav-link">Login</Link>
-          </li>
-          <li className="header-nav-list-item">
-            <Link to="/logout" className="header-nav-link">Logout</Link>
           </li>
         </ul>
       </nav>

@@ -1,8 +1,14 @@
-import React from 'react'
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <section className="contact-section" id="contact">
+      <div className="contact-container">
+        <h1 className="contact-title">Contact</h1>
+        <p className="contact-text">
+          Contact us at <a href="mailto:ortegacanillowe@gmail.com">Contact Us</a>
+        </p>
+      </div>
+    </section>
   )
 }
 
